@@ -1,18 +1,21 @@
----
-layout: default
-title: My Blog
----
 
-　　<h2>{{ page.title }}</h2>
 
-　　<p>Lastest Blogs</p>
+    　　---
+    　　layout: default
+    　　title: 我的Blog
+    　　---
 
-　　<ul>
+    　　<h2>{{ page.title }}</h2>
 
-　　　　{% for post in site.posts %}
+    　　<p>最新文章</p>
 
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    　　<ul>
 
-　　　　{% endfor %}
+    　　　　{% for post in site.posts %}
 
-　　</ul
+    　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+
+    　　　　{% endfor %}
+
+    　　</ul>
+
